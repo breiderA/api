@@ -7,6 +7,9 @@ import { User } from './user/entities/user.entity';
 import { TaskModule } from './task/task.module';
 import { TaskCategoriesModule } from './task-categories/task-categories.module';
 import { TaskStatusModule } from './task-status/task-status.module';
+import { Task } from './task/entities/task.entity';
+import { TaskCategory } from './task-categories/entities/task-category.entity';
+import { TaskStatus } from './task-status/entities/task-status.entity';
 
 @Module({
   imports: [
@@ -17,7 +20,7 @@ import { TaskStatusModule } from './task-status/task-status.module';
       username: 'root',
       password: '', // 
       database: 'apinueva',
-      entities: [User],
+      entities: [User,Task,TaskCategory,TaskStatus],
       synchronize: true
     }),
     UserModule,

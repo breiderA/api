@@ -8,5 +8,6 @@ export class TaskCategory {
     description:string;
     @Column()
     color:string;
+    tasks: any;
 
 }
